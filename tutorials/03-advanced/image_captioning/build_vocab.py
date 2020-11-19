@@ -3,6 +3,7 @@ import pickle
 import argparse
 from collections import Counter
 from pycocotools.coco import COCO
+nltk.download('punkt')
 
 
 class Vocabulary(object):
@@ -25,6 +26,7 @@ class Vocabulary(object):
 
     def __len__(self):
         return len(self.word2idx)
+
 
 def build_vocab(json, threshold):
     """Build a simple vocabulary wrapper."""
